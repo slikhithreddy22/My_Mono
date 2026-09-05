@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects — Chinna</title>
+<script src="theme.js"></script>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="wrap">
+
+  <div class="nav">
+    <a class="brand" href="index.html">Likhith <span>/ Chinna</span></a>
+    <div class="links">
+      <a href="index.html">home</a>
+      <a href="projects.html" class="active">projects</a>
+      <a href="papers.html">papers</a>
+      <a href="cv.html">cv</a>
+      <button class="toggle" id="themeToggle" aria-label="Toggle color theme">[ dark ]</button>
+    </div>
+  </div>
+
+  <h1 class="hero">Projects</h1>
+  <p class="lede">Two, in order of how much of my time they currently take.</p>
+
+  <div class="cellblock">
+    <div class="proj" id="mnemo">
+      <div class="num">01</div>
+      <div class="body">
+        <div class="title-row">
+          <h3>Mnemo <span style="color:var(--muted); font-weight:400;">/ Engram</span></h3>
+          <span class="status">active</span>
+        </div>
+        <p class="desc">
+          A privacy-preserving, CPU-only episodic memory retrieval system for egocentric video —
+          ask it what happened and when, without a GPU or a cloud upload. This is my final-year
+          research project, and the core academic focus right now. The pipeline runs YOLOv8 and
+          MediaPipe for detection, Farneback optical flow for motion, CLIP for semantics, and a
+          small ~5K-parameter MLP to fuse it all, indexed through ChromaDB and SQLite, queried
+          via phi3-mini or Moondream2 over Ollama. Video ingestion (milestone 1) is done; next up
+          is live RTSP, Whisper voice queries, and a web/mobile UI. Targeting ACM Multimedia,
+          IEEE TENCON, or BMVC 2026 for publication.
+        </p>
+        <div class="stack">
+          <span>YOLOv8</span><span>MediaPipe</span><span>Optical Flow</span><span>CLIP</span>
+          <span>MLP fusion</span><span>ChromaDB</span><span>SQLite</span><span>Ollama</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="proj" id="setu">
+      <div class="num">02</div>
+      <div class="body">
+        <div class="title-row">
+          <h3>Setu</h3>
+          <span class="status">early dev</span>
+        </div>
+        <p class="desc">
+          An independent Indian Sign Language translation app. Pose sequences captured through
+          MediaPipe are decoded into text through a T5 model, trained on the iSign dataset
+          (~228GB, currently staged through Google Colab with Drive persistence). Still early —
+          scaffolding and data pipeline stage.
+        </p>
+        <div class="stack">
+          <span>MediaPipe</span><span>T5</span><span>PyTorch</span><span>HuggingFace</span><span>iSign</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer class="site">© 2026 Chinna — built by hand, no framework.</footer>
+</div>
+
+</body>
+</html>
